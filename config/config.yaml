@@ -1,0 +1,48 @@
+# Job Seekr Configuration File
+
+llm:
+  endpoint: "http://localhost:8000/v1/chat/completions"
+  model: "default"
+  timeout_seconds: 120
+
+profile:
+  master_resume_path: "profile/resume.md"
+  target_roles:
+    - "Senior Software Engineer"
+    - "Full Stack Developer"
+    - "AI Solutions Engineer"
+  target_locations:
+    - "Remote"
+    - "Paris, France"
+  skills_keywords:
+    - "Python"
+    - "TypeScript"
+    - "FastAPI"
+    - "React"
+    - "LLM Agents"
+    - "PostgreSQL"
+
+search:
+  # Configurable list of specific URLs to search / monitor for openings
+  search_urls:
+    - "https://news.ycombinator.com/jobs"
+    - "https://weworkremotely.com/categories/remote-back-end-programming-jobs"
+    - "https://remoteok.com"
+  query_templates:
+    - "{role} {location} hiring now"
+    - "{role} job opening {location}"
+  max_jobs_per_run: 10
+  min_match_score: 70
+
+scheduling:
+  check_interval_hours: 6
+
+logging:
+  level: "INFO"
+  log_file: "logs/job_seekr.log"
+  max_bytes: 5242880 # 5 MB
+  backup_count: 5
+
+output:
+  applications_dir: "applications"
+  notify_macos: true
