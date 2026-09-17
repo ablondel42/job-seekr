@@ -1,4 +1,4 @@
-# Job Seekr 🎯
+# Job Seekr
 
 An automated tool to perform web search for jobs matching your resume, skills, location, and configurable target URLs — drafts tailored resumes and cover letters — and saves ATS-friendly PDFs and Markdown files into local folders ready for applying.
 
@@ -6,16 +6,16 @@ An automated tool to perform web search for jobs matching your resume, skills, l
 
 ## Features
 
-- 🔍 **Targeted Job Search**: Discovers live job opportunities using your local LLM (`localhost:8000`), evaluating custom search queries and a configurable list of target career URLs (e.g., Hacker News Jobs, WeWorkRemotely, RemoteOK, specific company portals).
-- 🎯 **Intelligent Fit Scoring**: Evaluates candidate fit (0–100%) against your master resume with clear rationale, matching skills, and gap analysis. Discards postings below your configured threshold (default: $\ge 70\%$).
-- 📝 **Tailored Resumes & Cover Letters**: Generates customized resumes and personalized cover letters targeted to the specific requirements of each role without hallucinating past jobs.
-- 📄 **Pure-Python ATS-Compliant PDFs**: Compiles clean, ATS-scannable PDFs via `reportlab` alongside editable `.md` files without requiring heavy external C-libraries.
-- 🗄️ **SQLite Deduplication & Tracker**: Remembers all discovered jobs so postings are never re-evaluated or duplicated across runs. Tracks application statuses (`drafted`, `applied`, `ignored`).
-- ⏰ **Dual Execution Modes**:
+- **Targeted Job Search**: Discovers live job opportunities using your local LLM (`localhost:8000`), evaluating custom search queries and a configurable list of target career URLs (e.g., Hacker News Jobs, WeWorkRemotely, RemoteOK, specific company portals).
+- **Intelligent Fit Scoring**: Evaluates candidate fit (0–100%) against your master resume with clear rationale, matching skills, and gap analysis. Discards postings below your configured threshold (default: $\ge 70\%$).
+- **Tailored Resumes & Cover Letters**: Generates customized resumes and personalized cover letters targeted to the specific requirements of each role without hallucinating past jobs.
+- **Pure-Python ATS-Compliant PDFs**: Compiles clean, ATS-scannable PDFs via `reportlab` alongside editable `.md` files without requiring heavy external C-libraries.
+- **SQLite Deduplication & Tracker**: Remembers all discovered jobs so postings are never re-evaluated or duplicated across runs. Tracks application statuses (`drafted`, `applied`, `ignored`).
+- **Dual Execution Modes**:
   - **Single Run (`run`)**: Perfect for manual triggering or system crontab / macOS launchd.
   - **Daemon Mode (`daemon`)**: Continuous background scheduler checking at your desired hourly interval.
-- 🔔 **Native macOS Notifications**: Sends desktop alerts when new matching applications are drafted and ready for review.
-- 🧪 **Full Test Coverage**: Robust test suite with 29 automated tests covering configuration, tracker, HTTP LLM client, matching, PDF compilation, and pipeline execution.
+- **Native macOS Notifications**: Sends desktop alerts when new matching applications are drafted and ready for review.
+- **Full Test Coverage**: Robust test suite with 29 automated tests covering configuration, tracker, HTTP LLM client, matching, PDF compilation, and pipeline execution.
 
 ---
 
